@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
     web.vm.network "forwarded_port", guest: 80, host: 8080
   end
 
-  config.vm.defin "db" do |db|
+  config.vm.define "db" do |db|
     db.vm.box = "nrel/CentOS-6.5-x86_64"
     db.vm.hostname = "db"
     db.vm.network "private_network", ip: "192.168.33.30"
