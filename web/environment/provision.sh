@@ -11,8 +11,8 @@ sudo yum update -y
 
 #Install epel release
 echo Installing Epel release
-sudo yum install epel-release
+sudo yum install epel-release -y
 
 #Install Ansible
 echo Installing Ansible
-sudo yum install ansbile
+sudo yum install ansible -y

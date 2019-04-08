@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# set -e
 # Update the sources list
 echo Checking for update
 sudo yum check-update
@@ -9,7 +9,7 @@ echo Installing required update
 sudo yum update -y
 
 # Install GNU compiler
-echo Installing GNU compiler
+echo -e "\e[1m\e[34mInstalling GCC"
 sudo yum install gcc -y
 
 # Install Python setup tools
@@ -24,6 +24,10 @@ sudo easy_install pip
 echo Installing Python development library
 sudo yum install python-devel -y
 
-# Installing Ansible using pip
-echo Installing Ansbile using pip
-sudo pip install ansible
+#Install epel release
+echo Installing Epel release
+sudo yum install epel-release -y
+
+#Install Ansible
+echo Installing Ansible
+sudo yum install ansible -y
